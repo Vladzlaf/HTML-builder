@@ -7,7 +7,7 @@ const filesPath = path.join(__dirname ,'/files');
 const filesCopyPath = path.join(__dirname, '/file-copy');
 
 readdir(filesCopyPath, (err, files) => {
-    if (err) console.log('Error!');
+    if (err) console.log();
     else {
         for (const file of files) {
             fs.unlink(path.join(__dirname, '/file-copy', file), err => {
